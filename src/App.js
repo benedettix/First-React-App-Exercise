@@ -32,6 +32,7 @@ function App() {
     if (data[id]) {
       let dataCopy = [...data];
       dataCopy[id].color = !dataCopy[id].color;
+      localStorage.data = JSON.stringify([...dataCopy]);
       setData([...dataCopy]);
     }
   };
